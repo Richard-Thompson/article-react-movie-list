@@ -1,0 +1,23 @@
+.movie-form {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow:hidden;
+}
+.movie-form input{
+  height:30px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 1rem;
+}
+.movie-form button{
+  background-color: #DD0515;
+  border:black;
+  color:#8E0221;
+  height:40px;
+  width:100px;
+  margin:0 auto;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
