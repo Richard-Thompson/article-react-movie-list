@@ -1,0 +1,18 @@
+.details > h1 {
+  color: #e91c50;
+}
+
+.movie-list-item hr {
+  margin: 1rem;
+  border: none;
+  border-bottom: 0.1rem solid #cccccc;
+}
+
+.movie-list-item:last-child hr {
+  display: none;
+}
+
+.movie-list-item img{
+  max-width: 30rem;
+  max-height: 30rem;
+}
