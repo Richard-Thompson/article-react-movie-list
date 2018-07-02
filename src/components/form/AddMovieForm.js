@@ -43,6 +43,7 @@ class AddMovieForm extends Component {
       });
     }
   onSubmit (event) {
+    event.preventDefault();
     //This is where the firebase code will
     // go to add data to the database.
   }

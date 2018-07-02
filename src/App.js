@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import Title from './components/title/Title'
+import MovieListHeader from './components/movie-list-header/MovieListHeader'
+import MovieList from './components/movie-list/MovieList'
+import AddMovieForm from './components/form/AddMovieForm'
+
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Title />
+        <MovieListHeader/>
+        <MovieList />
+        <AddMovieForm />
       </div>
     );
   }

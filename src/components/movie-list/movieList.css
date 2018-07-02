@@ -1,4 +1,8 @@
 .movie-list{
-  width:100%;
-  height: 60%;
+  color:black;
+  height:500px;
+  background-color:red;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
