@@ -5,7 +5,7 @@ class MovieList extends Component {
   render() {
     return (
       <div className='movie-list'>
-        {/* This is where we will use 
+        {/* We will create the 
         MovieListItem to display the 
         movie list in the next article*/}
       </div>

@@ -1,7 +1,7 @@
 .movie-list{
-  color:black;
+  color:#424040;
   height:500px;
-  background-color:red;
+  background-color:#e91c50;
   overflow: scroll;
   display: flex;
   flex-direction: column;
