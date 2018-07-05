@@ -1,22 +1,39 @@
 .movie-form {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow:hidden;
+  color: #424040;
 }
-.movie-form input{
-  height:30px;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 1rem;
-  color:#424040;
+.movie-form input, .movie-form button {
+  width: calc(100% - 1rem);
+  height: 4rem;
+
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+
+  font-size: 2rem;
+
+  border: 0.2rem solid #cccccc;
+  border-radius: 0.5rem;
 }
-.movie-form button{
-  color:#424040;
-  height:40px;
-  width:100px;
-  margin:0 auto;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
+
+.movie-form input:focus, .movie-form button:focus {
+  border: 0.2rem solid #e91c50;
+  outline: none;
+}
+
+.movie-form button {
+  margin-top: 2rem;
+
+  background-color: #e91c50;
+  color: #ffffff;
+
+  border: none;
+  cursor: pointer;
+}
+
+.movie-form button:hover, .movie-form button:focus {
+  background-color: #ce1543;
+  text-decoration: underline;
+}
+
+.movie-form button:active {
+  background-color: #bd1c44;
 }

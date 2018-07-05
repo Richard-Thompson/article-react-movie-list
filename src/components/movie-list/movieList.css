@@ -1,8 +1,9 @@
-.movie-list{
-  color:#424040;
-  height:500px;
-  background-color:#e91c50;
-  overflow: scroll;
-  display: flex;
-  flex-direction: column;
+.movie-list {
+  height: 50rem;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.movie-list .movie-list-item {
+  margin: 2rem 0;
 }

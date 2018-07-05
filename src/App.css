@@ -1,5 +1,23 @@
-.app{
-  width:500px;
-  height:800px;
+html {
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #424040;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.app {
+  width: 50rem;
+  height: 80rem;
   margin: 0 auto;
 }
