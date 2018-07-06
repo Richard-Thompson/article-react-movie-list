@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import './movieList.css'
 import MovieListItem from '../movie-list-item/MovieListItem';
+import firebase from '../../firebase.js'
 
 class MovieList extends Component {
   constructor(props) {
-    super(props)
-
+    super(props);
     this.state = {
-      dummyMovies: [{
-        title: 'Some movie',
-        description: 'Some movie description',
-        image: 'https://picsum.photos/300/200/?random'
-      }, {
-        title: 'Some movie',
-        description: 'Some movie description',
-        image: 'https://picsum.photos/300/200/?random'
-      }, {
-        title: 'Some movie',
-        description: 'Some movie description',
-        image: 'https://picsum.photos/300/200/?random'
-      }, {
-        title: 'Some movie',
-        description: 'Some movie description',
-        image: 'https://picsum.photos/300/200/?random'
-      }, {
-        title: 'Some movie',
-        description: 'Some movie description',
-        image: 'https://picsum.photos/300/200/?random'
-      }]
+      movies:[]
     }
+  }
+  componentDidMount () {
+    const itemsRef = firebase.database().ref('movies');
+
+    itemsRef.on('value', (snapshot) => {
+      let movies = snapshot.val();
+
+      let newState = [];
+
+      for (let movie in movies) {
+        newState.push({
+          title: movies[movie].title,
+          description: movies[movie].description,
+          image: movies[movie].image,
+        });
+      }
+      this.setState({
+        movies: newState
+      });
+    });
   }
   render() {
     return (
       <div className='movie-list'>
-        {this.state.dummyMovies.map((movie, i) => {
+        {this.state.movies.map((movie, i) => {
           return(
-              <MovieListItem movie={movie} key={i}/>
+            <MovieListItem movie={movie} key={i}/>
           )
         })}
     </div>

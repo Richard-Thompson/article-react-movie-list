@@ -11,3 +11,8 @@
 .movie-list-item:last-child hr {
   display: none;
 }
+
+.movie-list-item img{
+  max-width: 300px;
+  max-height: 300px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './addMovieForm.css';
+import firebase from '../../firebase.js'
 
 class AddMovieForm extends Component {
   constructor(props) {
@@ -44,8 +45,20 @@ class AddMovieForm extends Component {
     }
   onSubmit (event) {
     event.preventDefault();
-    //This is where the firebase code will
-    // go to add data to the database.
+
+    const movies = firebase.database().ref('movies');
+
+    const movie = {
+          title: this.state.title,
+          description: this.state.description,
+          image: this.state.image
+    }
+    movies.push(movie);
+    this.setState({
+          title:'',
+          description:'',
+          image:''
+    })
   }
 }
 export default AddMovieForm;
